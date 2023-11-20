@@ -1,11 +1,11 @@
 package com.app.upipg;
 
-import com.app.bumppypg.Models.PG_Collect_REQUEST;
-import com.app.bumppypg.Models.PG_Collect_RES;
-import com.app.bumppypg.Models.PG_INPUT_REQ;
-import com.app.bumppypg.Models.PG_INPUT_RES;
-import com.app.bumppypg.Models.PG_Response_REQ;
-import com.app.bumppypg.Models.PG_Response_RES;
+import com.app.upipg.Models.PG_Collect_REQUEST;
+import com.app.upipg.Models.PG_Collect_RES;
+import com.app.upipg.Models.PG_INPUT_REQ;
+import com.app.upipg.Models.PG_INPUT_RES;
+import com.app.upipg.Models.PG_Response_REQ;
+import com.app.upipg.Models.PG_Response_RES;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

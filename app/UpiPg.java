@@ -1,4 +1,4 @@
-package com.app.bumppypg;
+package com.app.upipg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,8 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.app.bumppypg.Models.PG_Response_REQ;
-import com.app.bumppypg.Models.PG_Response_RES;
+import com.app.upipg.Models.PG_Response_REQ;
+import com.app.upipg.Models.PG_Response_RES;
 import com.google.gson.Gson;
 
 import org.json.JSONException;

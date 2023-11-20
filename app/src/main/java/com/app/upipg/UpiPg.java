@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.app.bumppypg.Models.PG_Response_REQ;
-import com.app.bumppypg.Models.PG_Response_RES;
+import com.app.upipg.Models.PG_Response_REQ;
+import com.app.upipg.Models.PG_Response_RES;
 import com.google.gson.Gson;
 
 import org.json.JSONException;

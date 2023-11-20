@@ -1,4 +1,4 @@
-package com.app.bumppypg;
+package com.app.upipg;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -27,11 +27,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.app.bumppypg.Models.PG_Collect_REQUEST;
-import com.app.bumppypg.Models.PG_Collect_RES;
-import com.app.bumppypg.Models.PG_Collect_RES;
-import com.app.bumppypg.Models.PG_Response_REQ;
-import com.app.bumppypg.Models.PG_Response_RES;
+import com.app.upipg.Models.PG_Collect_REQUEST;
+import com.app.upipg.Models.PG_Collect_RES;
+import com.app.upipg.Models.PG_Collect_RES;
+import com.app.upipg.Models.PG_Response_REQ;
+import com.app.upipg.Models.PG_Response_RES;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

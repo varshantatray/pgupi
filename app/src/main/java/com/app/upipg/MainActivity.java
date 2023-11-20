@@ -27,8 +27,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.app.bumppypg.Models.PG_Collect_REQUEST;
-import com.app.bumppypg.Models.PG_Collect_RES;
+import com.app.upipg.Models.PG_Collect_REQUEST;
+import com.app.upipg.Models.PG_Collect_RES;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -117,8 +117,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Current Date: " + formattedDate);
 
 
-        // Get device ID
-         deviceId = getDeviceId();
+
 
         System.out.println("ipAddress"+ipAddress+"        \n    "+Build.DEVICE+"\n"+Build.USER+"\n"+Build.SERIAL+"\n"+Build.FINGERPRINT);
 
@@ -204,18 +203,6 @@ public class MainActivity extends AppCompatActivity {
         return "Unknown";
     }
 
-    // Get device ID
-    private String getDeviceId() {
-        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        if (telephonyManager != null) {
-            if (ActivityCompat.checkSelfPermission(this, READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
-                String deviceId = telephonyManager.getDeviceId();
-                Log.d("Device ID", "Device ID: " + deviceId);
-                return deviceId;
-            }
-        }
-        return "";
-    }
 
 
 

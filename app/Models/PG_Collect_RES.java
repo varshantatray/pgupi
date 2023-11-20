@@ -1,4 +1,4 @@
-package com.app.bumppypg.Models;
+package com.app.upipg.Models;
 
 import java.io.Serializable;
 
