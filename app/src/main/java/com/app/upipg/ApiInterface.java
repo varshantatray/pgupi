@@ -16,8 +16,10 @@ public interface ApiInterface {
 
 
 
+/*
     @POST("generateTransactionId.php")
     Call<PG_INPUT_RES> USER_INPUT(@Body PG_INPUT_REQ req);
+*/
 
 
 
