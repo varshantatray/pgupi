@@ -2,8 +2,6 @@ package com.app.upipg;
 
 import com.app.upipg.Models.PG_Collect_REQUEST;
 import com.app.upipg.Models.PG_Collect_RES;
-import com.app.upipg.Models.PG_INPUT_REQ;
-import com.app.upipg.Models.PG_INPUT_RES;
 import com.app.upipg.Models.PG_Response_REQ;
 import com.app.upipg.Models.PG_Response_RES;
 
