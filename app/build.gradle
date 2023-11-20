@@ -53,7 +53,7 @@ afterEvaluate {
                 //   from components.release
                 groupId = 'com.github.varshantatray'
                 artifactId = 'payment-SDK'
-                version = '1.0'
+                version = '1.0.0'
                 artifact(bundleReleaseAar)
             }
         }
