@@ -247,7 +247,8 @@ public class MainActivity extends AppCompatActivity {
                         i.putExtra("BRname",strbrandname);
                         i.putExtra("merchant_name",strmerchnat_name);
                         i.putExtra("merchant_id",strmerchnat_id);
-                        i.putExtra("merchnat_ref_id",strmerchnat_ref_id);
+                        i.putExtra("merchant_secret",strmerchant_secret);
+                        i.putExtra("merchnat_ref_id",strTransactionId);
                         i.putExtra("mobile",txtUserMobile.getText().toString());
                         i.putExtra("ip_address",ipAddress);
                         i.putExtra("date_time",formattedDate);

@@ -350,7 +350,7 @@ public class UpiPg extends AppCompatActivity {
     private void collectData(TransactionResult transactionResult) {
         // Add your data collection logic here
         Log.d("DataCollection", "Status: " + transactionResult.getStatus() + ", Message: " + transactionResult.getMessage());
-        Response(strmerchant_secret,strmerchnat_ref_id,transactionResult.getStatus(),transactionResult.getMessage());
+        Response(transactionResult.getStatus(),transactionResult.getMessage());
     }
 
     public interface SuccessHandler {
@@ -380,11 +380,11 @@ public class UpiPg extends AppCompatActivity {
 
     //call
 
-    private void Response(String strmerchant_secret,String strmerchnat_ref_id,String MerchantTransactionStatus,String StrResponse){
+    private void Response(String MerchantTransactionStatus,String StrResponse){
 
         PG_Response_REQ PG_REQ= new PG_Response_REQ();
         PG_REQ.setMerchantId(strmerchnat_id);
-        PG_REQ.setMerchantRefId(strmerchnat_ref_id);
+        PG_REQ.setMerchantRefId(strTransactionId);
         PG_REQ.setMerchantSecret(strmerchant_secret);
         PG_REQ.setMerchantUserName(strmerchnat_name);
         PG_REQ.setMerchantTransactionStatus(MerchantTransactionStatus);
