@@ -24,9 +24,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UpiPg extends AppCompatActivity {
-    String strupiid,strtTid,strorderid,stramount;
-    double percentvalue, gstamount;
-    float pecentge = 18;
+    String strorderid;
     private final Gson gson = new Gson();
     private SuccessHandler successHandler;
     private SuccessHandler failureHandler;
@@ -69,8 +67,13 @@ public class UpiPg extends AppCompatActivity {
         strbrandname = i.getExtras().getString("BRname");
         strmerchnat_name = i.getExtras().getString("merchant_name");
         strmerchnat_id = i.getExtras().getString("merchant_id");
-        strmerchnat_ref_id = i.getExtras().getString("merchant_ref_id");
-        strmerchant_secret = i.getExtras().getString("merchant_secret");
+
+        if (i.getExtras().getString("merchant_ref_id") != null) {
+            strmerchnat_ref_id = i.getExtras().getString("merchant_ref_id");
+        }
+        if (i.getExtras().getString("merchant_secret") != null) {
+            strmerchant_secret = i.getExtras().getString("merchant_secret");
+        }
         if (i.getExtras().getString("trOrId") != null) {
             strorderid = i.getExtras().getString("trOrId");
         }
@@ -347,7 +350,7 @@ public class UpiPg extends AppCompatActivity {
     private void collectData(TransactionResult transactionResult) {
         // Add your data collection logic here
         Log.d("DataCollection", "Status: " + transactionResult.getStatus() + ", Message: " + transactionResult.getMessage());
-        Response(transactionResult.getStatus(),transactionResult.getMessage());
+        Response(strmerchant_secret,strmerchnat_ref_id,transactionResult.getStatus(),transactionResult.getMessage());
     }
 
     public interface SuccessHandler {
@@ -377,7 +380,7 @@ public class UpiPg extends AppCompatActivity {
 
     //call
 
-    private void Response(String MerchantTransactionStatus,String StrResponse){
+    private void Response(String strmerchant_secret,String strmerchnat_ref_id,String MerchantTransactionStatus,String StrResponse){
 
         PG_Response_REQ PG_REQ= new PG_Response_REQ();
         PG_REQ.setMerchantId(strmerchnat_id);
