@@ -2,7 +2,6 @@ package com.app.upipg;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-import static android.Manifest.permission.READ_PHONE_STATE;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +11,6 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -42,7 +40,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class SDK_PG_UPI_Activity extends AppCompatActivity {
     String strupiid,strtTid,strorderid,stramount;
     double latitude;
     double longitude;
@@ -210,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
     //call
 
     private void PG_Collect(){
-        SharedPreferences prefs = MainActivity.this.getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+        SharedPreferences prefs = SDK_PG_UPI_Activity.this.getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
 
         PG_Collect_REQUEST Collect_REQ= new PG_Collect_REQUEST();
         Collect_REQ.setIpaddress(ipAddress);
@@ -237,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if (response.body().getStatus().equals("00")) {
 
-                        Intent i = new Intent(MainActivity.this,UpiPg.class);
+                        Intent i = new Intent(SDK_PG_UPI_Activity.this,UpiPg.class);
                         i.putExtra("trAm",strAmount);
                         i.putExtra("trUpiId",strUpiId);
                         i.putExtra("trId",strTransactionId);
@@ -268,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<PG_Collect_RES> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "onFailure.....", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SDK_PG_UPI_Activity.this, "onFailure.....", Toast.LENGTH_SHORT).show();
                 //   Toast.makeText(M_pinLoginCheck.this, "Failed to make the API call: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 // Log.e("API_CALL_FAILURE", "Failed to make the API call: " + t.getMessage());
             }
