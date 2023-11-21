@@ -245,7 +245,7 @@ public class UpiPg extends AppCompatActivity {
             e.printStackTrace();
         }
 
-       try {
+        try {
             if (requestCode == REQUEST_CODE_PHONEPE) {
                 if (data != null && data.getExtras() != null) {
                     Bundle bundle = data.getExtras();
@@ -278,7 +278,7 @@ public class UpiPg extends AppCompatActivity {
             e.printStackTrace();
         }
 
-       try {
+        try {
             if (requestCode == REQUEST_CODE_PAYTM) {
                 if (data != null && data.getExtras() != null) {
                     Bundle bundle = data.getExtras();
@@ -311,7 +311,7 @@ public class UpiPg extends AppCompatActivity {
             e.printStackTrace();
         }
 
-       try {
+        try {
             if (requestCode == REQUEST_CODE_UPI_PAYMENT) {
                 if (data != null && data.getExtras() != null) {
                     Bundle bundle = data.getExtras();
@@ -401,6 +401,9 @@ public class UpiPg extends AppCompatActivity {
 
 
                     if (response.body().getStatus().equals("00")) {
+
+
+                        //    if (response.body().getData().)
 
 /*
 Intent i =new Intent(UpiPg.this,CompleteTransaction.class);
