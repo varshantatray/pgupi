@@ -402,6 +402,9 @@ public class UpiPg extends AppCompatActivity {
 
                     if (response.body().getStatus().equals("00")) {
 
+/*
+Intent i =new Intent(UpiPg.this,CompleteTransaction.class);
+*/
 
                     } else {
 
