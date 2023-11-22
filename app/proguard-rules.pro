@@ -19,3 +19,14 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+# Keep public interface classes
+-keep public class com.app.upipg.SDK_PG_UPI_Activity {
+    public *;
+}
+
+# Keep public methods in SDK interface
+-keepclassmembers class com.app.upipg.SDK_PG_UPI_Activity {
+    public *;
+}
+
+# Add your additional rules here
