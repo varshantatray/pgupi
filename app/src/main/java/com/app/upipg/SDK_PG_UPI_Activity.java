@@ -117,7 +117,7 @@ public class SDK_PG_UPI_Activity extends AppCompatActivity {
             strorderid = i.getExtras().getString("trOrId");
         }
 
-
+        UPI_INTENT_ACTIVITY();
         merchant_name.setText(strmerchnat_name);
         txtUserAmount.setText("₹ "+strAmount);
         brand_name.setText("Brand Name : "+strbrandname);
@@ -315,8 +315,8 @@ public class SDK_PG_UPI_Activity extends AppCompatActivity {
 
     public  void UPI_INTENT_ACTIVITY(){
 
-        all_screen_upi.setVisibility(View.VISIBLE);
-        info_screen.setVisibility(View.GONE);
+        all_screen_upi.setVisibility(View.GONE);
+        info_screen.setVisibility(View.VISIBLE);
 
         ipaddress.setText("IP Address : "+ipAddress);
 
