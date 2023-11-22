@@ -20,12 +20,12 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 # Keep public interface classes
--keep public class com.app.upipg.SDK_PG_UPI_Activity {
+-keep public class com.app.upipg.CompleteTransaction {
     public *;
 }
 
 # Keep public methods in SDK interface
--keepclassmembers class com.app.upipg.SDK_PG_UPI_Activity {
+-keepclassmembers class com.app.upipg.CompleteTransaction {
     public *;
 }
 

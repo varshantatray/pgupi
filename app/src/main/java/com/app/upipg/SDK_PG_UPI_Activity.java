@@ -121,7 +121,7 @@ public class SDK_PG_UPI_Activity extends AppCompatActivity {
         merchant_name.setText(strmerchnat_name);
         txtUserAmount.setText("₹ "+strAmount);
         brand_name.setText("Brand Name : "+strbrandname);
-        PG_Collect();
+
 
 
 
@@ -254,7 +254,7 @@ public class SDK_PG_UPI_Activity extends AppCompatActivity {
         Collect_REQ.setMerchantSecret(strmerchant_secret);
         Collect_REQ.setMerchantTransactionAmount(strAmount);
         Collect_REQ.setMerchantUserName(strmerchnat_name);
-        Collect_REQ.setMobileNumber("9818151340");
+        Collect_REQ.setMobileNumber(txtUserMobile.getText().toString());
 
         //set data req
 
